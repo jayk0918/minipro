@@ -66,7 +66,7 @@ public class PhonebookApp {
 						
 					case 2:
 						System.out.println("<2.등록>");
-						sc.nextLine();
+						sc.nextLine();	// 입력에러방지
 						System.out.print(">이름:");
 						String newName = sc.nextLine();
 						
@@ -112,7 +112,7 @@ public class PhonebookApp {
 					case 4:
 						System.out.println("<4.검색>");
 						System.out.print(">이름: ");
-						sc.nextLine();
+						sc.nextLine(); // 입력에러방지
 						String search = sc.nextLine();
 						
 						for(Person searchName : pList) {
