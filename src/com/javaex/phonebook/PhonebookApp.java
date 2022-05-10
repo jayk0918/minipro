@@ -102,12 +102,20 @@ public class PhonebookApp {
 						System.out.println("<4.검색>");
 						System.out.print(">이름: ");
 						String search = sc.nextLine();
+						boolean check = false;
 						
 						for(Person searchName : pList) {
 							if(searchName.getName().contains(search)) {
 								searchName.indexInfo();
+								check = true;
 							}
 						}
+						
+						if(check == false) {
+							System.out.println("검색 결과를 찾을 수 없습니다.");
+						}
+						
+						
 						break;
 						
 					default:
