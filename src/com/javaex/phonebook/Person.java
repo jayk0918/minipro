@@ -3,6 +3,7 @@ package com.javaex.phonebook;
 public class Person {
 	
 	// 필드
+	private int index;
 	private String name;
 	private String hp;
 	private String company;
@@ -16,6 +17,13 @@ public class Person {
 		this.company = company;
 	}
 	
+	public Person(int index, String name, String hp, String company) {
+		this.index = index;
+		this.name = name;
+		this.hp = hp;
+		this.company = company;
+	}
+	
 	// 메소드 gs
 	public String getName() {
 		return name;
@@ -23,6 +31,14 @@ public class Person {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
 	}
 
 	public String getHp() {
@@ -51,7 +67,9 @@ public class Person {
 		System.out.println(this.name + "  " + this.hp + "  " +  this.company);
 	}
 	
-	
+	public void indexInfo() {
+		System.out.println(this.index + ".  " + this.name + "  " + this.hp + "  " +  this.company);
+	}
 	
 	
 	
