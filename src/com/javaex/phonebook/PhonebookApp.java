@@ -123,11 +123,11 @@ public class PhonebookApp {
 	
 	
 	// 쓰기작업(반복)
-	public static void rewrite(List<Person> pList) throws IOException {
+	public static void rewrite(List<Person> pUpdate) throws IOException {
 		Writer fw = new FileWriter("./phoneDB.txt");
 		BufferedWriter bw = new BufferedWriter(fw);
 		
-		for(Person newList : pList) {
+		for(Person newList : pUpdate) {
 			String saveStr = newList.getName()+ "," + newList.getHp()+ "," + newList.getCompany();
 			bw.write(saveStr);
 			bw.newLine();
