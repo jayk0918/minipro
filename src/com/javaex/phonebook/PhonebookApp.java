@@ -55,11 +55,14 @@ public class PhonebookApp {
 				break;
 				
 			}else {
+				for(int i=0; i<pList.size(); i++) {
+					pList.get(i).setIndex(i+1);
+				}
+				
 				switch(choice) {
 					case 1:
 						System.out.println("<1.리스트>");
 						for(int i=0; i<pList.size(); i++) {
-							pList.get(i).setIndex(i+1);
 							pList.get(i).indexInfo();
 						}
 						break;
