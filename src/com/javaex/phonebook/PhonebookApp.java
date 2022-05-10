@@ -114,8 +114,6 @@ public class PhonebookApp {
 						if(check == false) {
 							System.out.println("검색 결과를 찾을 수 없습니다.");
 						}
-						
-						
 						break;
 						
 					default:
