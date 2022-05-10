@@ -45,7 +45,7 @@ public class PhonebookApp {
 			System.out.println("");
 			System.out.println("1.리스트 2.등록 3.삭제 4.검색 5.종료");
 			System.out.println("-----------------------------");
-			System.out.print(">메뉴번호:");
+			System.out.print(">메뉴번호: ");
 			int choice = sc.nextInt();
 			sc.nextLine();	// 입력에러방지
 			
@@ -70,13 +70,13 @@ public class PhonebookApp {
 						
 					case 2:
 						System.out.println("<2.등록>");
-						System.out.print(">이름:");
+						System.out.print(">이름: ");
 						String newName = sc.nextLine();
 						
-						System.out.print(">휴대전화:");
+						System.out.print(">휴대전화: ");
 						String newHp = sc.nextLine();
 						
-						System.out.print(">회사전화:");
+						System.out.print(">회사전화: ");
 						String newCompany = sc.nextLine();
 						
 						Person newMember = new Person(newName, newHp, newCompany);
