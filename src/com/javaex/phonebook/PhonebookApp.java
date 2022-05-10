@@ -82,15 +82,8 @@ public class PhonebookApp {
 						Person newMember = new Person(newName, newHp, newCompany);
 						pList.add(newMember);
 						
-						Writer fw = new FileWriter("./phoneDB.txt");
-						BufferedWriter bw = new BufferedWriter(fw);
+						rewrite(pList);
 						
-						for(Person newList : pList) {
-							String saveStr = newList.getName()+ "," + newList.getHp()+ "," + newList.getCompany();
-							bw.write(saveStr);
-							bw.newLine();
-						}
-						bw.close();
 						System.out.println("[등록되었습니다.]");
 						break;
 						
@@ -100,15 +93,8 @@ public class PhonebookApp {
 						int delete = sc.nextInt();
 						pList.remove((delete) - 1);
 						
-						Writer fw2 = new FileWriter("./phoneDB.txt");
-						BufferedWriter bw2 = new BufferedWriter(fw2);
+						rewrite(pList);
 						
-						for(Person newList : pList) {
-							String saveStr = newList.getName()+ "," + newList.getHp()+ "," + newList.getCompany();
-							bw2.write(saveStr);
-							bw2.newLine();
-						}
-						bw2.close();
 						System.out.println("[삭제되었습니다.]");
 						break;
 						
@@ -133,6 +119,23 @@ public class PhonebookApp {
 		
 		br.close();
 		sc.close();
+	}// main method end
+	
+	
+	// 쓰기작업(반복)
+	public static void rewrite(List<Person> pList) throws IOException {
+		Writer fw = new FileWriter("./phoneDB.txt");
+		BufferedWriter bw = new BufferedWriter(fw);
+		
+		for(Person newList : pList) {
+			String saveStr = newList.getName()+ "," + newList.getHp()+ "," + newList.getCompany();
+			bw.write(saveStr);
+			bw.newLine();
+		}
+		bw.close();
 	}
-
+	
+	
+	
+	
 }
